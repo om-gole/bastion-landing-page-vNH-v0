@@ -3,6 +3,7 @@
 import { useRef, useEffect, useState } from "react";
 import { Monitor, Database, FileText, Table2, BellRing } from "lucide-react";
 
+
 const demoSlides = [
   {
     id: 1,
