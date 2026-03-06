@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useEffect, useState } from "react";
-import { Monitor, Database, FileText, TableCellsIcon, BellRing } from "lucide-react";
+import { Monitor, Database, FileText, Table2, BellRing } from "lucide-react";
 
 const demoSlides = [
   {
@@ -38,7 +38,7 @@ const demoSlides = [
     id: 4,
     title: "Excel Integration",
     description: "Sync data directly to your existing spreadsheets",
-    icon: TableCellsIcon,
+    icon: Table2,
     tip: {
       title: "Seamless Sync",
       text: "Connect your existing Excel models. Data flows bidirectionally, keeping everything in sync.",
