@@ -1,23 +1,24 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0b0a12;
-  --foreground: #F1F5F9;
-  --primary: #9810FA;
+  --background: #09090b;
+  --foreground: #fafafa;
+  --primary: #a855f7;
   --primary-foreground: #ffffff;
-  --secondary: #1E293B;
-  --secondary-foreground: #F1F5F9;
-  --accent: #e7e0f6;
-  --accent-foreground: #0A0F1A;
-  --muted: #1E293B;
-  --muted-foreground: #e7e0f6;
-  --border: #334155;
-  --card: #111827;
-  --card-foreground: #F1F5F9;
-  --success: #22C55E;
-  --warning: #F59E0B;
-  --destructive: #EF4444;
+  --secondary: #18181b;
+  --secondary-foreground: #fafafa;
+  --accent: #a855f7;
+  --accent-foreground: #ffffff;
+  --muted: #27272a;
+  --muted-foreground: #a1a1aa;
+  --border: #27272a;
+  --card: #18181b;
+  --card-foreground: #fafafa;
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --destructive: #ef4444;
   --radius: 0.75rem;
+  --purple-glow: rgba(168, 85, 247, 0.4);
 }
 
 @theme inline {
@@ -68,6 +69,27 @@ body {
   }
 }
 
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.4), 0 0 40px rgba(168, 85, 247, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(168, 85, 247, 0.6), 0 0 60px rgba(168, 85, 247, 0.3);
+  }
+}
+
 .animate-fade-in-up {
   animation: fade-in-up 0.6s ease-out forwards;
 }
@@ -76,10 +98,29 @@ body {
   animation: float 4s ease-in-out infinite;
 }
 
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
 .animation-delay-200 {
   animation-delay: 200ms;
 }
 
 .animation-delay-400 {
   animation-delay: 400ms;
+}
+
+/* Hide scrollbar for horizontal scroll demo */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }

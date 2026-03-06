@@ -45,7 +45,7 @@ export function Navigation() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-background/80 backdrop-blur-lg border-b border-border shadow-sm"
+          ? "bg-background/90 backdrop-blur-xl border-b border-border/50"
           : "bg-transparent"
       }`}
     >
@@ -53,50 +53,41 @@ export function Navigation() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2">
-            <ShieldIcon className="w-8 h-8 text-accent" />
+            <ShieldIcon className="w-8 h-8 text-primary" />
             <span className="text-xl font-bold text-foreground">Bastion</span>
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-10">
             <a
-              href="#features"
+              href="#about"
               className="text-muted-foreground hover:text-foreground transition-colors font-medium"
             >
               About
             </a>
             <a
-              href="#how-it-works"
+              href="#demo"
               className="text-muted-foreground hover:text-foreground transition-colors font-medium"
             >
               Product
             </a>
             <a
-              href="#comparison"
+              href="#contact"
               className="text-muted-foreground hover:text-foreground transition-colors font-medium"
             >
               Contact
             </a>
           </div>
 
-          {/* CTA Buttons */}
-          <div className="hidden md:flex items-center gap-4">
-  <a
-    href="#cta"
-    className="
-    relative inline-flex items-center gap-2
-    px-6 py-3 rounded-xl font-semibold text-white
-    bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500
-    bg-[length:200%_200%]
-    animate-gradient
-    hover:scale-[1.02]
-    transition-all duration-300
-    shadow-[0_0_20px_rgba(139,92,246,0.5)]
-    "
-  >
-    Try the Product →
-  </a>
-</div>
+          {/* CTA Button */}
+          <div className="hidden md:flex items-center">
+            <a
+              href="#book-demo"
+              className="relative inline-flex items-center gap-2 px-6 py-2.5 rounded-full font-semibold text-white bg-gradient-to-r from-purple-600 via-purple-500 to-violet-500 bg-[length:200%_200%] animate-gradient hover:scale-105 transition-transform duration-300 animate-pulse-glow"
+            >
+              Book a Demo
+            </a>
+          </div>
 
           {/* Mobile Menu Button */}
           <button
@@ -105,7 +96,7 @@ export function Navigation() {
             aria-label="Toggle menu"
           >
             <svg
-              className="w-6 h-6 text-primary"
+              className="w-6 h-6 text-foreground"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -131,45 +122,33 @@ export function Navigation() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden bg-background border-t border-border py-4">
+          <div className="md:hidden bg-background/95 backdrop-blur-xl border-t border-border/50 py-4">
             <div className="flex flex-col gap-4">
               <a
-                href="#features"
+                href="#about"
+                className="text-muted-foreground hover:text-foreground transition-colors font-medium px-4"
+              >
+                About
+              </a>
+              <a
+                href="#demo"
                 className="text-muted-foreground hover:text-foreground transition-colors font-medium px-4"
               >
                 Product
               </a>
               <a
-                href="#how-it-works"
+                href="#contact"
                 className="text-muted-foreground hover:text-foreground transition-colors font-medium px-4"
               >
-                Features
+                Contact
               </a>
-              <a
-                href="#comparison"
-                className="text-muted-foreground hover:text-foreground transition-colors font-medium px-4"
-              >
-                Pricing
-              </a>
-              <a
-                href="#cta"
-                className="text-muted-foreground hover:text-foreground transition-colors font-medium px-4"
-              >
-                About
-              </a>
-              <hr className="border-border" />
-              <a
-                href="#"
-                className="text-muted-foreground hover:text-foreground transition-colors font-medium px-4"
-              >
-                Log In
-              </a>
+              <hr className="border-border/50" />
               <div className="px-4">
                 <a
-                  href="#cta"
-                  className="block text-center bg-accent text-accent-foreground px-5 py-2.5 rounded-lg font-semibold hover:bg-accent/90 transition-colors"
+                  href="#book-demo"
+                  className="block text-center bg-gradient-to-r from-purple-600 via-purple-500 to-violet-500 text-white px-5 py-2.5 rounded-full font-semibold animate-gradient bg-[length:200%_200%]"
                 >
-                  Request Access
+                  Book a Demo
                 </a>
               </div>
             </div>
