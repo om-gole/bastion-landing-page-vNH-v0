@@ -29,7 +29,7 @@ export function Footer() {
 
         {/* Book a Demo */}
         <a
-          href="https://cal.com/omgole"
+          href="https://cal.com/naimahammad/bastion"
           className="flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors text-sm font-medium"
         >
           Book a Demo

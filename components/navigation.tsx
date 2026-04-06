@@ -80,7 +80,7 @@ export function Navigation() {
           {/* CTA Button */}
           <div className="hidden md:flex items-center">
             <a
-              href="https://cal.com/omgole"
+              href="https://cal.com/naimahammad/bastion"
               className="relative group"
             >
               <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-violet-600 rounded-full blur opacity-60 group-hover:opacity-100 transition duration-500 animate-pulse-glow" />
@@ -125,7 +125,7 @@ export function Navigation() {
               ))}
               <hr className="border-white/5 my-2" />
               <a
-                href="https://cal.com/omgole"
+                href="https://cal.com/naimahammad/bastion"
                 className="mx-4 mt-2 text-center bg-gradient-to-r from-purple-600 to-violet-600 text-white px-5 py-3 rounded-full font-semibold"
                 onClick={() => setMobileMenuOpen(false)}
               >
